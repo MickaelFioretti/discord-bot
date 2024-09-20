@@ -7,7 +7,20 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+discord-py = "^2.4.0"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.6"
+pyright = "^1.1.381"
+
+[tool.pyright]
+typeCheckingMode = "basic"
+reportIncompatibleVariableOverride = false
+
+[tool.ruff] # https://github.com/charliermarsh/ruff#reference
+line-length = 100
+target-version = "py310"
+select = ["ALL"]
 
 [build-system]
 requires = ["poetry-core"]
